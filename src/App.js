@@ -13,6 +13,7 @@ class App extends Component {
       password: '',
       submit: false,
     };
+    console.log(this.props);
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChanges = this.handleChanges.bind(this);
@@ -20,7 +21,7 @@ class App extends Component {
 
     handleSubmit(event) {
       event.preventDefault();
-      console.log("trying to log in with username:", this.state.username, "Password:", this.state.password);
+      console.log("Attempting to log in with username:", this.state.username, "Password:", this.state.password);
       octokit.authenticate({username: this.state.username, password: this.state.password, type:'basic'});
       octokit.repos.list().then(result => {console.log(result)});
       this.setState({submit:true});
@@ -35,18 +36,14 @@ class App extends Component {
         this.setState({password: event.target.value});
       }
       else{
-        console.log('Trying to update:',event.target.name,'to',event.target.value);
+        console.log('Attempting to update:',event.target.name,'to',event.target.value);
       }
     }
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <div>
-            {<LoginForm onChange={this.handleChanges} onSubmit={this.handleSubmit}/> }
-          </div>
-        </header>
+      <div>   
+          <LoginForm onChange={this.handleChanges} onSubmit={this.handleSubmit}/>  
       </div>
     );
   }

@@ -1,6 +1,60 @@
+.h3{
+	font-size: 1.3 rem;
+}
+
+.h4{
+	font-size: 0.4 rem;
+}
+
 .login {
 	width: 400px;
 	margin: auto;
 	position: absolute;
     top: 100px;
 }
+
+.logo {
+    width:100%;
+    padding-bottom: 30px;
+}
+
+.btn-primary{
+	background-color: #aa800c;
+	border-color: #aa800c;
+	margin: 30px;
+	width: 30%
+}
+
+.form-control:focus{
+	border-color:#aa800c;
+	box-shadow: 0px 0px 0px 0.2rem rgba(228, 192, 33, 0.25)
+}
+
+.btn-primary.focus, .btn-primary:focus {
+    box-shadow:0px 0px 0px 0.2rem rgba(228, 192, 33, 0.25);
+}
+.btn-primary:hover {
+    background-color: #aa800c;
+    border-color: #aa800c;
+}
+
+.container{
+    width:100%;
+}
+
+.btn-menu {
+    color: #fff;
+    background-color: rgb(15, 15, 15);
+    border-color: rgb(15, 15, 15);
+    width: 100%;
+    margin: 0%;
+    font-size:1.5em;
+    text-align: left;
+    padding-left:30px;
+}
+
+.btn-menu:hover {
+    color: #aa800c;
+}
+
+
