@@ -19,14 +19,14 @@
 }
 
 .btn-primary{
-	background-color: #aa800c;
-	border-color: #aa800c;
+	background-color: #aa808c;
+	border-color: #aa808c;
 	margin: 30px;
 	width: 30%
 }
 
 .form-control:focus{
-	border-color:#aa800c;
+	border-color:#aa808c;
 	box-shadow: 0px 0px 0px 0.2rem rgba(228, 192, 33, 0.25)
 }
 
@@ -34,8 +34,8 @@
     box-shadow:0px 0px 0px 0.2rem rgba(228, 192, 33, 0.25);
 }
 .btn-primary:hover {
-    background-color: #aa800c;
-    border-color: #aa800c;
+    background-color: #aa808c;
+    border-color: #aa808c;
 }
 
 .container{
@@ -54,7 +54,7 @@
 }
 
 .btn-menu:hover {
-    color: #aa800c;
+    color: #aa808c;
 }
 
 .profiler{
@@ -64,7 +64,7 @@
 
 .notification{
     text-align: center;
-    background-color: #aa800c;
+    background-color: #aa808c;
     width:100%;
     margin: 0px;
     padding: 0px;
