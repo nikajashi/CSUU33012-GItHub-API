@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Dashboard from './Dashboard';
 import LoginForm from './LoginForm.js';
 
 const octokit = require('@octokit/rest')()
@@ -12,6 +13,8 @@ class App extends Component {
       username: '',
       password: '',
       submit: false,
+      userInfo: '',
+      repoData: '',
     };
     console.log(this.props);
 
@@ -21,10 +24,22 @@ class App extends Component {
 
     handleSubmit(event) {
       event.preventDefault();
+      console.log("Trying to log in with username:", this.state.username, "Password:", this.state.password);
       console.log("Attempting to log in with username:", this.state.username, "Password:", this.state.password);
       octokit.authenticate({username: this.state.username, password: this.state.password, type:'basic'});
-      octokit.repos.list().then(result => {console.log(result)});
-      this.setState({submit:true});
+    
+      octokit.users.getAuthenticated().then(result => {
+        this.setState({userInfo: result.data});
+        console.log("User Info",this.state.userInfo);
+  
+      octokit.repos.list().then(result => {
+        this.setState({repoData: result.data});
+        console.log("Repo data", this.state.repoData);});
+  
+        this.setState({submit:true});
+  
+      });
+    
     }
 
 
@@ -43,7 +58,11 @@ class App extends Component {
   render() {
     return (
       <div>   
-          <LoginForm onChange={this.handleChanges} onSubmit={this.handleSubmit}/>  
+          {this.state.submit ? (
+          <Dashboard info={this.state.userInfo}/>
+            ) : (
+            <LoginForm onChange={this.handleChanges} onSubmit={this.handleSubmit}/>
+            )}
       </div>
     );
   }
