@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Dashboard from './Dashboard';
 import LoginForm from './LoginForm.js';
+import User from './User.js';
 
 const octokit = require('@octokit/rest')()
 
@@ -35,6 +36,9 @@ class App extends Component {
       octokit.repos.list().then(result => {
         this.setState({repoData: result.data});
         console.log("Repo data", this.state.repoData);});
+
+        octokit.activity.listNotifications().then(result => {
+          console.log("Activity",result)});
   
         this.setState({submit:true});
   
