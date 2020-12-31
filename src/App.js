@@ -16,6 +16,8 @@ class App extends Component {
       submit: false,
       userInfo: '',
       repoData: '',
+      starred: '',
+      projects: '',
     };
     console.log(this.props);
 
@@ -25,6 +27,9 @@ class App extends Component {
 
     handleSubmit(event) {
       event.preventDefault();
+
+      let promises =[];
+
       console.log("Trying to log in with username:", this.state.username, "Password:", this.state.password);
       console.log("Attempting to log in with username:", this.state.username, "Password:", this.state.password);
       octokit.authenticate({username: this.state.username, password: this.state.password, type:'basic'});
@@ -37,17 +42,33 @@ class App extends Component {
         this.setState({repoData: result.data});
         console.log("Repo data", this.state.repoData);});
 
-        octokit.activity.listNotifications().then(result => {
+      octokit.activity.listNotifications().then(result => {
           console.log("Activity",result)});
   
-        this.setState({submit:true});
+      promises.push(octokit.activity.listReposStarredByUser({
+            username: this.state.userInfo.login,
+            sort:     "updated",
+          }))
+          promises.push(octokit.projects.listForUser({
+            username: this.state.userInfo.login
+          }))
+           Promise.all(promises).then(resps => {
+             console.log(resps)
+            this.setState({projects: resps[0].data, starred : resps[1].data});
+          })
+          console.log('Promises', promises);   
+          })
+
+      console.log(this.state.starred);
+      console.log(this.state.projects);
+      this.setState({submit:true});
   
-      });
+      };
     
-    }
+    
 
 
-    handleChanges(event) {
+  handleChanges(event) {
       if(event.target.name==="username"){
         this.setState({username: event.target.value});
       }

@@ -19,14 +19,14 @@
 }
 
 .btn-primary{
-	background-color: #aa808c;
-	border-color: #aa808c;
+	background-color: #a76f1ca8;
+	border-color: #a76f1ca8;
 	margin: 30px;
 	width: 30%
 }
 
 .form-control:focus{
-	border-color:#aa808c;
+	border-color:#a76f1ca8;
 	box-shadow: 0px 0px 0px 0.2rem rgba(228, 192, 33, 0.25)
 }
 
@@ -34,8 +34,8 @@
     box-shadow:0px 0px 0px 0.2rem rgba(228, 192, 33, 0.25);
 }
 .btn-primary:hover {
-    background-color: #aa808c;
-    border-color: #aa808c;
+    background-color: #a76f1ca8;
+    border-color: #a76f1ca8;
 }
 
 .container{
@@ -54,7 +54,7 @@
 }
 
 .btn-menu:hover {
-    color: #aa808c;
+    color: #a76f1ca8;
 }
 
 .profiler{
@@ -64,7 +64,7 @@
 
 .notification{
     text-align: center;
-    background-color: #aa808c;
+    background-color: #a76f1ca8;
     width:100%;
     margin: 0px;
     padding: 0px;
@@ -79,4 +79,28 @@
     padding-left:0px;
 } 
 
+.main-panel{
+    padding-left:20px;
+    margin: 10px;
+}
+
+.developer-stats{
+    border:1px solid #a76f1ca8;
+    margin:20px;
+    padding:10px;
+}
+
+.developer-stats {
+    font-size:0.2rem !important;
+}
+
+.social-stats{
+    padding:10px;
+    border:1px solid #a76f1ca8;
+    margin:20px;
+}
+
+.social-stats #h4{
+    font-size:2em;
+}
 
