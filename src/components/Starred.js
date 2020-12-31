@@ -16,6 +16,9 @@ class Star extends Component {
     if(x.length===0){
         return null;
     }
+
+    /* code for punchard stats that wasn't implemented
+    
     for(var i = 0; i<x.length; i++){
         var card=
             <Card style={{ width: '100%' , height:"250px", marginTop:"10px", marginRight:"10px"}}>
@@ -28,7 +31,8 @@ class Star extends Component {
             </Card.Body>
             </Card>
         arr.push(card);
-  }
+    }
+    */
   return arr;
   }
  
@@ -40,7 +44,7 @@ class Star extends Component {
     <div style={{marginLeft:"25px"}}>
 
         {this.props.starred.length===0 ? (
-        <h3> Oops!, looks like you have any stars.</h3>
+        <h3> You don't seem to have any stars.</h3>
         ) : (
 
             <div className='col-lg-8'>

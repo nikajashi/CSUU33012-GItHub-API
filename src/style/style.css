@@ -1,9 +1,14 @@
 .h3{
-	font-size: 1.3 rem;
+	font-size: 1.2 rem;
 }
 
-.h4{
-	font-size: 0.4 rem;
+.h7{
+	font-size: 1.2em;
+    font-weight:700;
+}
+
+#h4{
+    font-size: 0.4rem;
 }
 
 .login {
@@ -57,11 +62,6 @@
     color: #a76f1ca8;
 }
 
-.profiler{
-    width: 80%;
-    border-radius: 50%;
-}
-
 .notification{
     text-align: center;
     background-color: #a76f1ca8;
@@ -72,7 +72,6 @@
     color:#fff !important;
     font-size: 1em !important;
 }
-
 
 .container-fluid{
     padding-right:0px;
@@ -103,4 +102,105 @@
 .social-stats #h4{
     font-size:2em;
 }
+
+.gravatar{
+    border-radius: 50%;
+    width: 50%;
+    border:5px solid #a76f1ca8;;
+}
+.profile-container{
+    width:100%;
+    text-align:center;
+    font-size:1.2em;
+    position:absolute;
+    bottom:20%;
+}
+
+.main-panel{
+    padding-left:20px;
+    margin: 10px;
+}
+
+.stat-box{
+    border:1px solid #a76f1ca8;;
+    margin:20px;
+    padding:10px;
+    font-size:0.6em !important;
+}
+
+.quick-stats{
+    border: 1px solid #a76f1ca8;;
+    margin-left: 25px;
+    margin-top: 10px;
+    padding: 10px;
+    height: 400px;
+    width:20%;
+    font-size:1.2em !important;
+    box-shadow: 0 .5rem 1rem rgba(228, 192, 33, 0.25) !important;
+    border-radius: .25rem!important;    
+}
+
+.commit-tile{
+    border: 1px solid #a76f1ca8;;
+    margin-left: 25px;
+    margin-top: 10px;
+    padding: 10px;
+    height: 500px;
+    width:900px;
+    font-size:1.2em !important;
+    box-shadow: 0 .5rem 1rem rgba(228, 192, 33, 0.25);
+    border-radius: .25rem!important;   
+}
+
+
+.social-stats {
+    border:1px solid #a76f1ca8;;
+    margin:20px;
+    padding:10px;
+    width:20%;
+    font-size:1.2em !important;
+}
+
+.bio{
+    margin:30px;
+}
+
+
+.language-tile{
+    border:1px solid #a76f1ca8;;
+    margin:10px;
+    padding:10px;
+    height:400px;
+    width:35%;
+    font-size:1.2em !important;
+    box-shadow: 0 .5rem 1rem rgba(228, 192, 33, 0.25)!important;
+    border-radius: .25rem!important;
+}
+
+.pie-container{
+    text-align: center;
+ 
+}
+
+.section:hover {
+    transform: scale(1.04);
+  }
+.section {
+    transition: all 1s;
+
+  }
+
+  .svg{
+      overflow:visible;
+  }
+
+  .legend{
+      z-index:1000;
+      position:absolute;
+      font-size:14px;
+  }
+
+  .languageGraph{
+      overflow:visible;
+  }
 
