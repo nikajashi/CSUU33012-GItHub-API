@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Dashboard from './Dashboard';
-import LoginForm from './LoginForm.js';
+import Dashboard from '/components/LoginForm.js';
+import LoginForm from '/components/Dashboard.js';
 const octokit = require('@octokit/rest')()
 
 

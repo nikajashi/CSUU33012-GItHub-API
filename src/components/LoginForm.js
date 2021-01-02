@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/style.css';
 import logo from './img/logo.png';
-import Jump from 'react-reveal/Jump';
+
 
 
 class LoginForm extends Component {
